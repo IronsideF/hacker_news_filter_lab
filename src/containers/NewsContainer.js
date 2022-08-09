@@ -42,7 +42,15 @@ useEffect(()=> {
 }, [storiesIds, offset]);
 
 useEffect(()=> {
+    if (textFilter === ""){
+        setTextFilter(null)
+    }
+    if (textFilter){ 
     setFilteredStories(topStories.filter((story) => story.title.toLowerCase().match(textFilter.toLowerCase())))
+} else {
+    setFilteredStories([])
+}
+    setOffset(0);
 }, [textFilter])
 
 

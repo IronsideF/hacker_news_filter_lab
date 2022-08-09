@@ -6,7 +6,7 @@ const NewsListItem = ({story}) => {
 
   
     return (<>
-    {story.url ? <li><a href={story.url}>{story.title}</a></li> : <li><a href= {storyIdUrl}>{story.title}</a></li>}
+    {story.url ? <li><a href={story.url}>{story.title}</a> by: {story.by}</li> : <li><a href= {storyIdUrl}>{story.title}</a> by: {story.by}</li>}
     </>
   )
 }
